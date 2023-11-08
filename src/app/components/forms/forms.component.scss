@@ -51,16 +51,27 @@
 .form-group .radio-wrapper:nth-last-child(2) {
   margin: 32px 0;
   border-top: none;
+  flex-direction: column;
+  gap: 10px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 .form-group .checkbox-wrapper {
   color: var(--light-grey);
+
+  input[type="checkbox"] {
+    margin-right: 4px;
+  }
 }
 
 .form-group .btn-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: 12px;
   width: 100%;
 
@@ -83,5 +94,9 @@
   .btn-secondary {
     background-color: transparent;
     border: 2px solid var(--grey-white);
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
   }
 }
